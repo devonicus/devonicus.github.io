@@ -3,23 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Devonicus – Biscuit's Bookshop Mysteries</title>
-  <meta name="description" content="Biscuit's Bookshop Mysteries: a cosy block puzzle game where a bookshop cat solves seaside mysteries.">
+  <title>Devonicus – Cosy games</title>
+  <meta name="description" content="Devonicus is a small independent studio in Australia making cosy puzzle and mystery games.">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .games { display: grid; gap: 16px; margin: 16px 0 8px; }
+    .game { display: flex; gap: 16px; align-items: center; padding: 14px; border: 1px solid #dfe6e3; border-radius: 14px; color: inherit; text-decoration: none; }
+    .game img { width: 84px; height: 84px; border-radius: 20px; flex: none; }
+    .game h3 { margin: 0 0 4px; color: var(--cranberry); }
+    .game p { margin: 0; }
+    .game.soon { border-style: dashed; color: var(--ink-soft); }
+    .game.soon .badge { width: 84px; height: 84px; border-radius: 20px; flex: none; background: #f3efe3; display: grid; place-items: center; font-size: 32px; }
+  </style>
 </head>
 <body>
   <header>
-    <div class="studio">Devonicus</div>
-    <h1>Biscuit's Bookshop Mysteries</h1>
+    <div class="studio">Independent game studio</div>
+    <h1>Devonicus</h1>
   </header>
   <main>
-    <h2>Fill the shelves. Find the clues. Solve the case.</h2>
-    <p>Biscuit is the resident cat of the Salt &amp; Page, a little bookshop in the seaside village of Little Wending. When the shop's prized antique atlas vanishes the night before it reopens, Biscuit sets out to find out who took it.</p>
-    <p>Drag books onto the shelf to clear rows and columns. Clear a line through a clue to add it to Biscuit's notebook, then decide who did it.</p>
-    <p><a class="button" href="https://play.google.com/store/apps/details?id=com.devonicus.biscuitbookshop">Get it on Google Play</a></p>
-    <h2>Support</h2>
-    <p>Questions or problems? Email <a href="mailto:privacy@devonicus.com">privacy@devonicus.com</a>.</p>
+    <h2>Small, cosy games</h2>
+    <p>We make relaxing puzzle and mystery games for phones. Short to play and easy to pick up.</p>
+
+    <h2>Our games</h2>
+    <div class="games">
+      <div class="game soon">
+        <div class="badge" aria-hidden="true">✦</div>
+        <div>
+          <h3>Coming soon</h3>
+          <p>Our first games are in testing now. Check back soon.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Contact</h2>
+    <p>Email <a href="mailto:contact@devonicus.com">contact@devonicus.com</a>.</p>
   </main>
-  <footer><a href="privacy.html">Privacy policy</a> · © 2026 Devonicus</footer>
+  <footer>© 2026 Devonicus</footer>
 </body>
 </html>
