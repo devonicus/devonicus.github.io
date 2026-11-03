@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Private shortcut page: not linked from anywhere, and asks search engines not to index or follow it. -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Devonicus – game shelf</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .shelf { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; margin: 16px 0; }
+    .card { display: block; text-decoration: none; color: inherit; border: 1px solid #dfe6e3; border-radius: 16px; overflow: hidden; background: #fff; transition: transform .12s; }
+    .card:hover, .card:focus-visible { transform: translateY(-2px); }
+    .card img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
+    .card div { padding: 10px 12px 12px; }
+    .card h3 { margin: 0; font-size: 18px; color: var(--cranberry); }
+    .card p { margin: 2px 0 0; font-size: 14px; color: var(--ink-soft); line-height: 1.35; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="studio">Devonicus</div>
+    <h1>Game shelf</h1>
+  </header>
+  <main>
+    <p class="muted">Local test builds (ads are simulated). Add <code>?lang=de</code> (es, pt, fr) to try a language.</p>
+    <div class="shelf">
+      <a class="card" href="nap-spots/"><img src="index2-thumbs/nap-spots.jpg" alt=""><div><h3>Nap Spots</h3><p>Cosy cat logic · CrazyGames</p></div></a>
+      <a class="card" href="arrow-knots/"><img src="index2-thumbs/arrow-knots.jpg" alt=""><div><h3>Arrow Knots</h3><p>Tap-away arrows · CrazyGames</p></div></a>
+      <a class="card" href="tilt/"><img src="index2-thumbs/tilt.jpg" alt=""><div><h3>Tilt</h3><p>Rotate-the-board blocks · CrazyGames</p></div></a>
+      <a class="card" href="loop-line/"><img src="index2-thumbs/loop-line.jpg" alt=""><div><h3>Loop Line</h3><p>Conveyor sort · Poki</p></div></a>
+      <a class="card" href="shelf-life/"><img src="index2-thumbs/shelf-life.jpg" alt=""><div><h3>Shelf Life</h3><p>Sorting roguelite · Poki</p></div></a>
+      <a class="card" href="biscuits-bookshop-mysteries/"><div><h3>Biscuit's Bookshop</h3><p>Android app page</p></div></a>
+    </div>
+  </main>
+  <footer>© 2026 Devonicus</footer>
+</body>
+</html>
