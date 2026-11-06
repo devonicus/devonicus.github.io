@@ -4,16 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Devonicus – Cosy games</title>
-  <meta name="description" content="Devonicus is a small independent studio in Australia making cosy puzzle and mystery games.">
+  <meta name="description" content="Devonicus is a small independent studio in Australia making cosy puzzle and mystery games for the browser, phones and Roblox.">
+  <meta property="og:title" content="Devonicus – Cosy games">
+  <meta property="og:description" content="Cosy puzzle and mystery games for the browser, phones and Roblox.">
+  <meta property="og:image" content="https://devonicus.com/img/nap-spots.webp">
   <link rel="stylesheet" href="style.css">
   <style>
-    .games { display: grid; gap: 16px; margin: 16px 0 8px; }
-    .game { display: flex; gap: 16px; align-items: center; padding: 14px; border: 1px solid #dfe6e3; border-radius: 14px; color: inherit; text-decoration: none; }
-    .game img { width: 84px; height: 84px; border-radius: 20px; flex: none; }
-    .game h3 { margin: 0 0 4px; color: var(--cranberry); }
-    .game p { margin: 0; }
-    .game.soon { border-style: dashed; color: var(--ink-soft); }
-    .game.soon .badge { width: 84px; height: 84px; border-radius: 20px; flex: none; background: #f3efe3; display: grid; place-items: center; font-size: 32px; }
+    .games { display: grid; gap: 14px; margin: 14px 0 8px; }
+    .game { display: flex; gap: 16px; align-items: flex-start; padding: 14px; border: 1px solid #dfe6e3; border-radius: 14px; background: #fff; }
+    .game img { width: 84px; height: 84px; border-radius: 20px; flex: none; background: #f3efe3; }
+    .game h3 { margin: 0 0 2px; color: var(--cranberry); }
+    .game p { margin: 0 0 8px; font-size: 16px; line-height: 1.45; }
+    .where { display: flex; flex-wrap: wrap; gap: 6px; }
+    .where a, .where span { font-size: 14px; line-height: 1; padding: 7px 11px; border-radius: 999px; white-space: nowrap; }
+    .where a { background: var(--brass); color: var(--ink); text-decoration: none; font-weight: 700; }
+    .where a:hover, .where a:focus-visible { filter: brightness(1.05); text-decoration: underline; }
+    .where span { background: #f3efe3; color: var(--ink-soft); }
+    .where .small { background: none; padding: 7px 4px; font-weight: 400; color: var(--link); text-decoration: underline; }
+    @media (max-width: 480px) { .game { gap: 12px; padding: 12px; } .game img { width: 64px; height: 64px; border-radius: 16px; } }
   </style>
 </head>
 <body>
@@ -23,17 +31,109 @@
   </header>
   <main>
     <h2>Small, cosy games</h2>
-    <p>We make relaxing puzzle and mystery games for phones. Short to play and easy to pick up.</p>
+    <p>We make relaxing puzzle and mystery games that are short to play and easy to pick up. Play them in your browser, on your phone or on Roblox.</p>
 
-    <h2>Our games</h2>
+    <h2>Puzzle games</h2>
     <div class="games">
-      <div class="game soon">
-        <div class="badge" aria-hidden="true">✦</div>
+      <article class="game">
+        <img src="img/nap-spots.webp" alt="" width="84" height="84">
         <div>
-          <h3>Coming soon</h3>
-          <p>Our first games are in testing now. Check back soon.</p>
+          <h3>Nap Spots</h3>
+          <p>Find every sleepy cat a nap spot. A cosy logic puzzle with 240 levels and a new daily nap.</p>
+          <div class="where">
+            <a href="nap-spots/">Play in browser</a>
+            <span>Android: in testing</span>
+            <span>iPhone: coming soon</span>
+            <a class="small" href="nap-spots/privacy.html">Privacy</a>
+          </div>
         </div>
-      </div>
+      </article>
+      <article class="game">
+        <img src="img/harbour-knots.webp" alt="" width="84" height="84">
+        <div>
+          <h3>Harbour Knots</h3>
+          <p>Slide the ropes out, unlock the padlocks and untie the knots. 300 levels across ten harbours.</p>
+          <div class="where">
+            <a href="harbour-knots/">Play in browser</a>
+            <span>Android: in testing</span>
+            <span>iPhone: coming soon</span>
+            <a class="small" href="harbour-knots/privacy.html">Privacy</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <img src="img/round-the-houses.webp" alt="" width="84" height="84">
+        <div>
+          <h3>Round the Houses</h3>
+          <p>Draw the postie's round through every garden, calling at the houses in order. 300 cosy streets.</p>
+          <div class="where">
+            <a href="round-the-houses/">Play in browser</a>
+            <span>Android: in testing</span>
+            <span>iPhone: coming soon</span>
+            <a class="small" href="round-the-houses/privacy.html">Privacy</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <img src="img/biscuits-bookshop-mysteries.webp" alt="" width="84" height="84">
+        <div>
+          <h3>Biscuit's Bookshop Mysteries</h3>
+          <p>Fill the shelves, find the clues and help a bookshop cat solve seaside mysteries.</p>
+          <div class="where">
+            <a href="biscuits-bookshop-mysteries/">About the game</a>
+            <span>Android: in testing</span>
+            <a class="small" href="biscuits-bookshop-mysteries/privacy.html">Privacy</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <img src="img/shelf-life.webp" alt="" width="84" height="84">
+        <div>
+          <h3>Shelf Life</h3>
+          <p>Sort the stock, sell the shelves and survive the week in a sorting roguelite.</p>
+          <div class="where">
+            <a href="shelf-life/">Play in browser</a>
+          </div>
+        </div>
+      </article>
+      <article class="game">
+        <img src="img/loop-line.webp" alt="" width="84" height="84">
+        <div>
+          <h3>Loop Line</h3>
+          <p>Send the wagons round the track and clear the picture, one colour at a time.</p>
+          <div class="where">
+            <a href="loop-line/">Play in browser</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <h2>On Roblox</h2>
+    <div class="games">
+      <article class="game">
+        <img src="img/daily-rivals.webp" alt="" width="84" height="84">
+        <div>
+          <h3>Daily Rivals: Puzzle Duels</h3>
+          <p>Race a real rival on the same puzzle board, play the daily puzzle and climb the weekly leagues.</p>
+          <div class="where"><a href="https://www.roblox.com/games/107245053851422">Play on Roblox</a></div>
+        </div>
+      </article>
+      <article class="game">
+        <img src="img/deckhand.webp" alt="" width="84" height="84">
+        <div>
+          <h3>Deckhand</h3>
+          <p>A co-op card roguelite at sea. Crew the ship with friends and sail the daily voyage.</p>
+          <div class="where"><a href="https://www.roblox.com/games/116187765739731">Play on Roblox</a></div>
+        </div>
+      </article>
+      <article class="game">
+        <img src="img/cold-case.webp" alt="" width="84" height="84">
+        <div>
+          <h3>Cold Case</h3>
+          <p>A co-op detective game. Search the scene with your squad, link the clues and name the culprit.</p>
+          <div class="where"><a href="https://www.roblox.com/games/117879954704415">Play on Roblox</a></div>
+        </div>
+      </article>
     </div>
 
     <h2>Contact</h2>
