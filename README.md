@@ -20,7 +20,7 @@ Static site for GitHub Pages.
 | `nap-spots/` | playable web build, privacy policy | `devonicus/nap-spots` `dist/index.html` |
 | `harbour-knots/` | playable web build, privacy policy | `devonicus/harbour-knots` `dist/index.html` |
 | `round-the-houses/` | playable web build, privacy policy | `devonicus/round-the-houses` `dist/index.html` |
-| `shelf-life/` | playable web build | `devonicus/shelf-life` `dist/index.html` |
+| `shelf-life/` | playable web build, privacy policy | `devonicus/shelf-life` `dist/index.html` |
 | `loop-line/` | playable web build | `devonicus/loop-line` `dist/index.html` |
 | `biscuits-bookshop-mysteries/` | game page, icon, privacy policy | |
 | `arrow-knots/`, `tilt/` | redirects only (renamed / retired games) | |
