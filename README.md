@@ -13,17 +13,13 @@ Static site for GitHub Pages.
 
 ## Games
 
-| Folder | What's there | Source |
-|---|---|---|
-| `nap-spots/` | playable web build, privacy policy | `devonicus/nap-spots` `dist/index.html` |
-| `harbour-knots/` | playable web build, privacy policy | `devonicus/harbour-knots` `dist/index.html` |
-| `round-the-houses/` | playable web build, privacy policy | `devonicus/round-the-houses` `dist/index.html` |
-| `shelf-life/` | playable web build, privacy policy | `devonicus/shelf-life` `dist/index.html` |
-| `loop-line/` | playable web build | `devonicus/loop-line` `dist/index.html` |
-| `biscuits-bookshop-mysteries/` | game page, icon, privacy policy | |
-| `arrow-knots/`, `tilt/` | redirects only (renamed / retired games) | |
+**No playable builds are public.** Game folders hold only what the stores need (privacy policies).
+Test builds live in `test-40690d9538/`, each encrypted with a password (StatiCrypt, AES-256) and
+kept out of search results. Anyone without the password gets only scrambled data.
 
-The hosted builds are the local target (no portal SDK; rewarded "ads" are simulated). To update one,
-rebuild the game and copy its `dist/index.html` over the folder's `index.html`.
+To update a test build, re-encrypt the game's `dist/index.html` with the same password:
+`npx staticrypt index.html -p <password> --short --remember 30 -d test-40690d9538/<game>`
+then add `<meta name="robots" content="noindex, nofollow">` to its `<head>`.
+To lock everyone out, re-encrypt every build with a new password.
 
-The Roblox games link straight to their Roblox pages (place ids are in each game's `docs/LIVE.md`).
+Never copy an unencrypted build onto this site.
