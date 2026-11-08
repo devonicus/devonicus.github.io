@@ -11,7 +11,13 @@ Static site for GitHub Pages.
 - `privacy.html`: a copy of Biscuit's privacy policy at the old address. Google Play and released
   versions of the game link here, so **keep it, and keep it identical to the game folder's copy**
   until Play Console and the game both use the new address. Then it can become a redirect.
-- `index2.html`: the games list: private, unlinked and kept out of search results (noindex). Game links go here, not on `index.html`.
+- `index2.html`: the games page: private, unlinked and kept out of search results (noindex). Game links go
+  here, not on `index.html`. One card per game with where it can be played, ready for launch:
+  - **Web:** each "Play (test build)" chip points at the locked build. When a game is live on a portal,
+    point the chip at the portal's game page and call it "Play in browser".
+  - **Apps:** swap "Android: in testing" / "… coming soon" for store links
+    (`https://play.google.com/store/apps/details?id=<package>`, the App Store link from App Store Connect).
+  - At launch, this page (with the test-build chips removed) can become the public home page.
 
 ## Games
 
