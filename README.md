@@ -1,5 +1,7 @@
 # devonicus.com
 
+**Before changing anything here, read [READ-FIRST.md](READ-FIRST.md).**
+
 Static site for GitHub Pages.
 
 - `index.html`: public studio home page. **No game links here.**
