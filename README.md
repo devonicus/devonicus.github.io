@@ -2,16 +2,14 @@
 
 Static site for GitHub Pages.
 
-- `index.html`: studio home page. One card per game with where it can be played. When an app leaves
-  testing, swap its "Android: in testing" / "iPhone: coming soon" label for a store link
-  (`https://play.google.com/store/apps/details?id=<package>`, App Store link from App Store Connect).
-- `img/`: 256 px game icons (WebP) used on the home page.
+- `index.html`: public studio home page. **No game links here.**
+- `img/`: 256 px game icons (WebP).
 - `style.css`: shared styles for every page.
 - `app-ads.txt`: authorises your AdMob account to sell ads in your apps. **Must stay at the root of the site.**
 - `privacy.html`: a copy of Biscuit's privacy policy at the old address. Google Play and released
   versions of the game link here, so **keep it, and keep it identical to the game folder's copy**
   until Play Console and the game both use the new address. Then it can become a redirect.
-- `index2.html`: private, unlinked and noindex shelf of the playable builds (thumbs in `index2-thumbs/`).
+- `index2.html`: the games list: private, unlinked and kept out of search results (noindex). Game links go here, not on `index.html`.
 
 ## Games
 
