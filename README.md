@@ -15,7 +15,8 @@ Static site for GitHub Pages.
   here, not on `index.html`. One card per game with where it can be played, ready for launch:
   - **Web:** each "Play (test build)" chip points at the locked build. When a game is live on a portal,
     point the chip at the portal's game page and call it "Play in browser".
-  - **Apps:** swap "Android: in testing" / "… coming soon" for store links
+  - **Apps:** Android apps in testing already link to Google Play (opens once published) and the tester opt-in page;
+    remove "Join the Android test" at launch. Swap "… coming soon" for store links
     (`https://play.google.com/store/apps/details?id=<package>`, the App Store link from App Store Connect).
   - At launch, this page (with the test-build chips removed) can become the public home page.
 
