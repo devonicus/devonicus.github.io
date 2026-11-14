@@ -29,6 +29,9 @@ kept out of search results. Anyone without the password gets only scrambled data
 To update a test build, re-encrypt the game's `dist/index.html` with the same password:
 `npx staticrypt index.html -p <password> --short --remember 30 -d test-40690d9538/<game>`
 then add `<meta name="robots" content="noindex, nofollow">` to its `<head>`.
+Run it next to a `.staticrypt.json` holding the salt the other builds use (copy `staticryptSaltUniqueVariableName`
+from any existing test build), so testers who ticked "remember me" stay unlocked across games and updates.
+Check every build before pushing: the right password opens it, a wrong one doesn't, and the game's title isn't readable in the file.
 To lock everyone out, re-encrypt every build with a new password.
 
 Never copy an unencrypted build onto this site.
