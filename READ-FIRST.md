@@ -11,6 +11,7 @@ devonicus.com is public. Since 8 November 2026 these rules apply:
    which is unlinked and kept out of search results (noindex). Links there point at the locked test
    builds, or at the portal and store pages once a game is live.
 4. Game folders keep only what stores need: `privacy.html` (Google Play and Apple link to these).
+   Share links live in `go/<game>/`: a noindex page that only sends people to the app store pages (no builds).
 5. **This repository's history was rewritten** on 8 November 2026 to remove the old unlocked builds.
    Any older clone or copy (for example `C:\cl\games\devonicus-site` before that date) must not be
    pushed or copied back over the site. Start from a fresh clone of `devonicus/devonicus.github.io`.
