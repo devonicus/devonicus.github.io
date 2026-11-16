@@ -13,6 +13,12 @@
     .game h3 { margin: 0 0 4px; color: var(--cranberry); }
     .game p { margin: 0; }
     .game.soon { border-style: dashed; color: var(--ink-soft); }
+    .game { align-items: flex-start; }
+    .stores { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 6px; }
+    .stores a { font-size: 15px; line-height: 1; padding: 10px 14px; border-radius: 999px; background: var(--brass); color: var(--ink); text-decoration: none; font-weight: 700; }
+    .stores a.beta { background: #f3efe3; }
+    .note { font-size: 14px; color: var(--ink-soft); }
+    .game.soon { align-items: center; }
     .game.soon .badge { width: 84px; height: 84px; border-radius: 20px; flex: none; background: #f3efe3; display: grid; place-items: center; font-size: 32px; }
   </style>
 </head>
@@ -27,11 +33,23 @@
 
     <h2>Our games</h2>
     <div class="games">
+      <div class="game">
+        <img src="img/shelf-life.webp" alt="" width="84" height="84">
+        <div>
+          <h3>Shelf Life</h3>
+          <p>Sort the stock, sell the shelves and survive the week. A corner-shop puzzle with relics that change the rules.</p>
+          <div class="stores">
+            <a href="https://apps.apple.com/app/id6833218090">App Store</a>
+            <a class="beta" href="https://play.google.com/store/apps/details?id=com.devonicus.shelflife">Google Play (beta)</a>
+          </div>
+          <p class="note">Android is in a closed beta. To join, email <a href="mailto:contact@devonicus.com?subject=Shelf%20Life%20Android%20beta">contact@devonicus.com</a> with the Google account you use on your phone.</p>
+        </div>
+      </div>
       <div class="game soon">
         <div class="badge" aria-hidden="true">✦</div>
         <div>
-          <h3>Coming soon</h3>
-          <p>Our first games are in testing now. Check back soon.</p>
+          <h3>More coming soon</h3>
+          <p>Our next games are in testing now. Check back soon.</p>
         </div>
       </div>
     </div>
