@@ -17,12 +17,14 @@
     .get .links a { padding: 12px 18px; border-radius: 999px; background: var(--brass); color: var(--ink); font-weight: 700; text-decoration: none; }
   </style>
   <script>
-    // straight to the store on a phone; desktops see both buttons
+    // straight to the store on a phone; desktops see the buttons.
+    // Google Play is still a closed test: set ANDROID_LIVE to true once Shelf Life is in production.
+    var ANDROID_LIVE = false;
     (function () {
       var ua = navigator.userAgent || "";
       var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
       if (ios) location.replace("https://apps.apple.com/app/id6833218090");
-      else if (/Android/.test(ua)) location.replace("https://play.google.com/store/apps/details?id=com.devonicus.shelflife");
+      else if (ANDROID_LIVE && /Android/.test(ua)) location.replace("https://play.google.com/store/apps/details?id=com.devonicus.shelflife");
     })();
   </script>
 </head>
@@ -37,8 +39,12 @@
     <p>Sort the stock, sell the shelves and survive the week.</p>
     <div class="links">
       <a href="https://apps.apple.com/app/id6833218090">App Store</a>
-      <a href="https://play.google.com/store/apps/details?id=com.devonicus.shelflife">Google Play</a>
+      <a id="play" href="https://play.google.com/store/apps/details?id=com.devonicus.shelflife" hidden>Google Play</a>
     </div>
+    <p id="soon">Coming soon to Google Play.</p>
+    <script>
+      if (ANDROID_LIVE) { document.getElementById("play").hidden = false; document.getElementById("soon").hidden = true; }
+    </script>
   </main>
   <footer>© 2026 Devonicus</footer>
 </body>
