@@ -3,10 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Devonicus – Biscuit's Bookshop Mysteries</title>
-  <meta name="description" content="Biscuit's Bookshop Mysteries: a charming block puzzle game where a bookshop cat solves seaside mysteries.">
+  <title>Biscuit's Bookshop Mysteries – cat detective block puzzles | Devonicus</title>
+  <meta name="description" content="Biscuit's Bookshop Mysteries: a cosy block puzzle mystery. Fill the shelves, collect the clues and help Biscuit the bookshop cat name the culprit. Four cases, 80 designed levels. Coming soon to the App Store.">
+  <link rel="canonical" href="https://devonicus.com/biscuits-bookshop-mysteries/">
+  <meta property="og:title" content="Biscuit's Bookshop Mysteries">
+  <meta property="og:description" content="Cat detective block puzzles: fill the shelves, find the clues, solve the case.">
+  <meta property="og:image" content="https://devonicus.com/img/biscuits-bookshop-mysteries.webp">
+  <meta property="og:url" content="https://devonicus.com/biscuits-bookshop-mysteries/">
   <link rel="stylesheet" href="../style.css">
   <link rel="icon" href="icon.png">
+  <style>
+    .hero { display: flex; gap: 16px; align-items: center; margin: 8px 0 4px; }
+    .hero img { width: 96px; height: 96px; border-radius: 22px; flex: none; }
+    .soon { display: inline-block; margin: 14px 0 6px; padding: 11px 16px; border-radius: 999px; background: #f3efe3; font-weight: 700; }
+    .stores { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 6px; }
+    .stores a { font-size: 15px; line-height: 1; padding: 11px 16px; border-radius: 999px; background: var(--brass); color: var(--ink); text-decoration: none; font-weight: 700; }
+    .stores a.beta { background: #f3efe3; }
+    .shots { display: flex; gap: 10px; overflow-x: auto; padding: 8px 0 12px; scroll-snap-type: x mandatory; }
+    .shots img { width: 200px; height: auto; border-radius: 14px; flex: none; scroll-snap-align: start; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
+    .note { font-size: 14px; color: var(--ink-soft); }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MobileApplication","name":"Biscuit's Bookshop Mysteries","operatingSystem":"iOS, Android","applicationCategory":"GameApplication","genre":"Puzzle","description":"A cosy block puzzle mystery: fill the shelves, collect the clues and help Biscuit the bookshop cat name the culprit.","image":"https://devonicus.com/img/biscuits-bookshop-mysteries.webp","url":"https://devonicus.com/biscuits-bookshop-mysteries/","offers":{"@type":"Offer","price":"0","priceCurrency":"AUD"},"publisher":{"@type":"Organization","name":"Devonicus","url":"https://devonicus.com/"}}
+  </script>
 </head>
 <body>
   <header>
@@ -14,29 +33,47 @@
     <h1>Biscuit's Bookshop Mysteries</h1>
   </header>
   <main>
-    <h2>Fill the shelves. Find the clues. Solve the case.</h2>
-    <p>Biscuit is the resident cat of the Salt &amp; Page, a little bookshop in the seaside village of Little Wending. Nothing gets past Biscuit, which is lucky, because Little Wending has rather a lot of mysteries.</p>
-    <p>Drag books onto the shelf to clear rows and columns. Clear a line through a magnifying glass to add a clue to Biscuit's notebook. Then decide who did it.</p>
+    <div class="hero">
+      <img src="../img/biscuits-bookshop-mysteries.webp" alt="Biscuit's Bookshop Mysteries app icon" width="96" height="96">
+      <p><strong>Fill the shelves. Find the clues. Solve the case.</strong> A cosy block puzzle mystery with a bookshop cat for a detective.</p>
+    </div>
+    <div class="soon">Coming soon to the App Store</div>
+    <p class="note">Android is in a closed beta. To join, email <a href="mailto:contact@devonicus.com?subject=Biscuit's%20Bookshop%20Mysteries%20Android%20beta">contact@devonicus.com</a> with the Google account you use on your phone.</p>
 
-    <h2>Three cases to solve</h2>
+    <div class="shots" aria-label="Screenshots">
+      <img src="img/1-title.webp" alt="The Salt &amp; Page bookshop at night, with Biscuit in the window" width="200" height="434" loading="lazy">
+      <img src="img/2-shelf.webp" alt="Dragging books onto the 8 by 8 shelf" width="200" height="434" loading="lazy">
+      <img src="img/3-clues.webp" alt="Clearing lines through magnifying glasses to collect clues" width="200" height="434" loading="lazy">
+      <img src="img/4-suspects.webp" alt="Naming the culprit: who took the atlas?" width="200" height="434" loading="lazy">
+    </div>
+
+    <h2>A bookshop cat with a mystery to solve</h2>
+    <p>Biscuit is the resident cat of the Salt &amp; Page, a little bookshop in the seaside village of Little Wending. Nothing gets past Biscuit, which is lucky, because Little Wending has rather a lot of mysteries.</p>
+
+    <h2>How it plays</h2>
+    <p>Drag books onto the 8×8 shelf. Fill a row or column to clear it, and clear a line through a magnifying glass to add a clue to Biscuit's notebook. Every level is a designed puzzle that's been proven solvable, not endless random blocks. When the evidence is in, you name the culprit yourself, and see if you were right first time.</p>
+
+    <h2>Four cases to solve</h2>
     <h3>Case 1: The Vanishing Atlas</h3>
     <p>The night before the bookshop reopens, its prized antique sea atlas disappears. Who took it, and why?</p>
     <h3>Case 2: The Lighthouse Letters</h3>
     <p>A bundle of letters from 1893 sets the whole village hunting for treasure. Biscuit thinks the paper is too young.</p>
     <h3>Case 3: The Clockmaker's Key</h3>
     <p>Every night the church clock stops at 3:17. Someone is climbing the tower.</p>
-    <p class="muted">Case 4: The Regatta Cup is coming soon.</p>
+    <h3>Case 4: The Regatta Cup</h3>
+    <p>Three days before the Little Wending Regatta, the silver cup vanishes from the harbour office. Nothing else is touched.</p>
+    <p class="note">Case 5: The Forgotten Parcel is coming soon.</p>
 
     <h2>What's inside</h2>
     <ul>
-      <li>60 puzzle levels, each one proven solvable, across 15 story chapters</li>
-      <li>A cast of village suspects, each with a voice of their own</li>
-      <li>Biscuit's clue notebook and a casebook to track every mystery</li>
-      <li>Free to play, with optional reward videos for hints and extra books</li>
-      <li>No account needed. Your progress stays on your device</li>
+      <li>80 designed puzzle levels: 20 per case across 5 story chapters</li>
+      <li>A village full of suspects, each with a voice of their own</li>
+      <li>Biscuit's clue notebook keeps track of every piece of evidence</li>
+      <li>Short levels, perfect for a few minutes at a time, that get trickier as the case goes on</li>
+      <li>Free to play, with optional reward videos for hints, undos and extra books</li>
+      <li>Remove ads with a single purchase, or join the optional Detective's Club</li>
+      <li>No account needed, and it plays offline. Your progress stays on your device</li>
     </ul>
-
-    <p><a class="button" href="https://play.google.com/store/apps/details?id=com.devonicus.biscuitbookshop">Get it on Google Play</a></p>
 
     <h2>Support</h2>
     <p>Questions or problems? Email <a href="mailto:contact@devonicus.com">contact@devonicus.com</a>.</p>
