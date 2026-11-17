@@ -3,19 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Math Rivals – Math Rivals</title>
-  <meta name="description" content="Math Rivals, a 1v1 number duel game by Devonicus.">
-  <meta name="robots" content="noindex">
+  <title>Math Rivals – 1v1 mental math duels | Devonicus</title>
+  <meta name="description" content="Math Rivals is a 90-second 1v1 math duel: drag across tiles that add up to the target and beat another player's recorded run on the same board. A new Daily Board every day. Coming soon to the App Store.">
+  <link rel="canonical" href="https://devonicus.com/math-rivals/">
+  <meta property="og:title" content="Math Rivals: 1v1 Math Duel">
+  <meta property="og:description" content="90-second number duels against real players' recorded runs.">
+  <meta property="og:image" content="https://devonicus.com/img/math-rivals.webp">
+  <meta property="og:url" content="https://devonicus.com/math-rivals/">
   <link rel="stylesheet" href="../style.css">
+  <style>
+    .hero { display: flex; gap: 16px; align-items: center; margin: 8px 0 4px; }
+    .hero img { width: 96px; height: 96px; border-radius: 22px; flex: none; }
+    .soon { display: inline-block; margin: 14px 0 6px; padding: 11px 16px; border-radius: 999px; background: #f3efe3; font-weight: 700; }
+    .shots { display: flex; gap: 10px; overflow-x: auto; padding: 8px 0 12px; scroll-snap-type: x mandatory; }
+    .shots img { width: 200px; height: auto; border-radius: 14px; flex: none; scroll-snap-align: start; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MobileApplication","name":"Math Rivals","operatingSystem":"iOS, Android","applicationCategory":"GameApplication","genre":"Puzzle","description":"90-second 1v1 mental math duels against other players' recorded runs, with a new Daily Board every day.","image":"https://devonicus.com/img/math-rivals.webp","url":"https://devonicus.com/math-rivals/","offers":{"@type":"Offer","price":"0","priceCurrency":"AUD"},"publisher":{"@type":"Organization","name":"Devonicus","url":"https://devonicus.com/"}}
+  </script>
 </head>
 <body>
   <header>
     <a href="../"><div class="studio">Devonicus</div></a>
-    <h1>Math Rivals: 1v1 Math Duel</h1>
+    <h1>Math Rivals</h1>
   </header>
   <main>
-    <p>Math Rivals is a 90-second number duel: drag across touching tiles that add up to the target, and beat another player's recorded run on the same board.</p>
-    <p><strong>Coming soon to the App Store and Google Play.</strong></p>
+    <div class="hero">
+      <img src="../img/math-rivals.webp" alt="Math Rivals app icon" width="96" height="96">
+      <p><strong>1v1 mental math duels.</strong> 90 seconds, the same board, and another player's run to beat.</p>
+    </div>
+    <div class="soon">Coming soon to the App Store and Google Play</div>
+
+    <div class="shots" aria-label="Screenshots">
+      <img src="img/1-duel.webp" alt="A 90-second duel: drag across tiles that add up to the target" width="200" height="434" loading="lazy">
+      <img src="img/2-result.webp" alt="A duel won by 754 points" width="200" height="434" loading="lazy">
+      <img src="img/3-rival.webp" alt="Your rival's recorded run and score to beat" width="200" height="434" loading="lazy">
+      <img src="img/4-home.webp" alt="Home screen with the Daily Board and weekly points" width="200" height="434" loading="lazy">
+    </div>
+
+    <h2>How it plays</h2>
+    <p>Drag across touching tiles whose numbers add up to the target. Longer paths and gold tiles score more, and quick clears build a combo. Every duel is the same board for both players: you race another player's recorded run, shown live as a progress bar, so there's no waiting for an opponent to be online.</p>
+    <p>The Daily Board is the same for everyone each day, with one scored try, and every duel earns points in a weekly league. Free to play, with an optional Rivals Club subscription that never buys points or wins.</p>
+
     <p><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a> · <a href="delete-account.html">Delete your account</a></p>
   </main>
   <footer><a href="../">Devonicus</a> · © 2026 Devonicus</footer>

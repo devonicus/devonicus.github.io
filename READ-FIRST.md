@@ -11,7 +11,7 @@ devonicus.com is public. Since 8 November 2026 these rules apply:
    "email us to join" note), never to builds, even locked ones. It's the public studio page. Game links go in `index2.html`,
    which is unlinked and kept out of search results (noindex). Links there point at the locked test
    builds, or at the portal and store pages once a game is live.
-4. Game folders keep only what stores need: `privacy.html` (Google Play and Apple link to these).
+4. Game folders keep only what stores need (`privacy.html`, terms, account deletion) plus an optional public game page `index.html` (description, screenshots, store buttons, no builds). `sitemap.xml` lists the public pages; add a game page there when you make one. Pages marked noindex (go/, index2, testers, test builds) never go in the sitemap.
    Share links live in `go/<game>/`: a noindex page that only sends people to the app store pages (no builds).
 5. **This repository's history was rewritten** on 8 November 2026 to remove the old unlocked builds.
    Any older clone or copy (for example `C:\cl\games\devonicus-site` before that date) must not be
