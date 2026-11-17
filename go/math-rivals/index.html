@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Store links only: this page sends phones to the right app store. No game build here (see READ-FIRST.md). -->
+  <meta name="robots" content="noindex">
+  <title>Get Math Rivals</title>
+  <meta property="og:title" content="Math Rivals: 1v1 Math Duel">
+  <meta property="og:description" content="90-second number duels against real players' recorded runs. Race my score, play the Daily Board, keep your streak.">
+  <meta property="og:image" content="https://devonicus.com/img/math-rivals.webp">
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    .get { text-align: center; padding: 24px 0; }
+    .get img { width: 112px; height: 112px; border-radius: 26px; }
+    .get .links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 16px; }
+    .get .links a { padding: 12px 18px; border-radius: 999px; background: var(--brass); color: var(--ink); font-weight: 700; text-decoration: none; }
+  </style>
+  <script>
+    // straight to the store on a phone; desktops see the buttons.
+    // Google Play is still a closed test: set ANDROID_LIVE to true once Math Rivals is in production.
+    var ANDROID_LIVE = false;
+    (function () {
+      var ua = navigator.userAgent || "";
+      var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+      if (ios) location.replace("https://apps.apple.com/app/id6834963648");
+      else if (ANDROID_LIVE && /Android/.test(ua)) location.replace("https://play.google.com/store/apps/details?id=com.devonicus.mathrivals");
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <div class="studio">Independent game studio</div>
+    <h1>Devonicus</h1>
+  </header>
+  <main class="get">
+    <img src="../../img/math-rivals.webp" alt="" width="112" height="112">
+    <h2>Math Rivals</h2>
+    <p>90-second number duels. Can you beat my run?</p>
+    <div class="links">
+      <a href="https://apps.apple.com/app/id6834963648">App Store</a>
+      <a id="play" href="https://play.google.com/store/apps/details?id=com.devonicus.mathrivals" hidden>Google Play</a>
+    </div>
+    <p id="soon">On Android? Math Rivals is in a closed beta: email <a href="mailto:contact@devonicus.com?subject=Math%20Rivals%20Android%20beta">contact@devonicus.com</a> to join.</p>
+    <script>
+      if (ANDROID_LIVE) { document.getElementById("play").hidden = false; document.getElementById("soon").hidden = true; }
+    </script>
+  </main>
+  <footer>© 2026 Devonicus</footer>
+</body>
+</html>
