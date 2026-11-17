@@ -14,9 +14,10 @@
   <style>
     .hero { display: flex; gap: 16px; align-items: center; margin: 8px 0 4px; }
     .hero img { width: 96px; height: 96px; border-radius: 22px; flex: none; }
-    .stores { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 6px; }
-    .stores a { font-size: 15px; line-height: 1; padding: 11px 16px; border-radius: 999px; background: var(--brass); color: var(--ink); text-decoration: none; font-weight: 700; }
-    .stores a.beta { background: #f3efe3; }
+    .stores { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 12px 0 6px; }
+    .stores a { display: inline-block; line-height: 0; }
+    .stores img.as { height: 40px; width: auto; }
+    .stores img.gp { height: 59px; width: auto; margin: -9.5px -9px; }
     .shots { display: flex; gap: 10px; overflow-x: auto; padding: 8px 0 12px; scroll-snap-type: x mandatory; }
     .shots img { width: 200px; height: auto; border-radius: 14px; flex: none; scroll-snap-align: start; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
     .note { font-size: 14px; color: var(--ink-soft); }
@@ -36,8 +37,8 @@
       <p><strong>A corner-shop sorting puzzle.</strong> Sort the stock, sell the shelves and survive the week.</p>
     </div>
     <div class="stores">
-      <a href="https://apps.apple.com/app/id6833218090">Download on the App Store</a>
-      <a class="beta" href="https://play.google.com/store/apps/details?id=com.devonicus.shelflife">Google Play (beta)</a>
+      <a href="https://apps.apple.com/app/id6833218090"><img class="as" src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="120" height="40"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.devonicus.shelflife"><img class="gp" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="152" height="59"></a>
     </div>
     <p class="note">Free, with optional ads and a one-off Remove ads purchase. iPhone and iPad. Android is in a closed beta: email <a href="mailto:contact@devonicus.com?subject=Shelf%20Life%20Android%20beta">contact@devonicus.com</a> to join.</p>
 
