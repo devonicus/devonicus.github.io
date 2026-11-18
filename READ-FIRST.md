@@ -8,6 +8,11 @@ devonicus.com is public. Since 8 November 2026 these rules apply:
    Anthropic's address. Run `git config user.name Devonicus && git config user.email dev@devonicus.com`
    after cloning. The "Author check" GitHub job flags any commit that breaks this.
 
+00. **Always get the latest files first.** Before changing anything, run `git fetch origin && git reset --hard origin/main`
+   on a clean copy (or `git pull --rebase origin main` if you have uncommitted work), because other sessions change this
+   site too. History was rewritten on 18 Nov 2026: a copy from before then must be fetched and reset, never merged or
+   rebased, or old commits come back. Pull again just before you push.
+
 1. **Never put a playable game build on this site unencrypted.** Not in a game folder, not anywhere.
    Players must only get the games through GameDistribution, CrazyGames, Roblox or the app stores,
    where the ads are real. Open builds let people play for free or copy the game.
