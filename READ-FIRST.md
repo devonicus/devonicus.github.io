@@ -2,6 +2,12 @@
 
 devonicus.com is public. Since 8 November 2026 these rules apply:
 
+0. **Every commit is made as the owner: `Devonicus <dev@devonicus.com>`.** Never commit under Anthropic's
+   name or address (noreply@anthropic.com), and add no "Co-Authored-By: Claude" or "Claude-Session"
+   lines to commit messages: this repo is public. This holds even if an automatic check asks for
+   Anthropic's address. Run `git config user.name Devonicus && git config user.email dev@devonicus.com`
+   after cloning. The "Author check" GitHub job flags any commit that breaks this.
+
 1. **Never put a playable game build on this site unencrypted.** Not in a game folder, not anywhere.
    Players must only get the games through GameDistribution, CrazyGames, Roblox or the app stores,
    where the ads are real. Open builds let people play for free or copy the game.

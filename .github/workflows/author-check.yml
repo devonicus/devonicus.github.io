@@ -1,0 +1,22 @@
+# Fails when a pushed commit is recorded under Anthropic's address or names Claude as co-author.
+# Owner's rule: every commit on this public repo is made as Devonicus <dev@devonicus.com>.
+name: Author check
+on: [push]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+      - name: Check authors
+        run: |
+          range="${{ github.event.before }}..${{ github.sha }}"
+          git cat-file -e "${{ github.event.before }}" 2>/dev/null || range="${{ github.sha }}~1..${{ github.sha }}"
+          bad=$(git log --format='%h %ae %ce' "$range" | grep -i 'anthropic' || true)
+          trailer=$(git log --format='%h %B' "$range" | grep -iE 'Co-Authored-By: Claude|Claude-Session' || true)
+          if [ -n "$bad$trailer" ]; then
+            echo "::error::Commits must be made as Devonicus <dev@devonicus.com> with no Claude trailers (see READ-FIRST.md)."
+            echo "$bad"; echo "$trailer"; exit 1
+          fi
+          echo "All commits are by Devonicus."
