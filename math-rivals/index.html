@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Math Rivals – 1v1 mental math duels | Devonicus</title>
-  <meta name="description" content="Math Rivals is a 90-second 1v1 math duel: drag across tiles that add up to the target and beat another player's recorded run on the same board. A new Daily Board every day. Coming soon to the App Store.">
+  <meta name="description" content="Math Rivals is a 90-second 1v1 math duel: drag across tiles that add up to the target and beat another player's recorded run on the same board. A new Daily Board every day. Free on Google Play; coming soon to the App Store.">
   <link rel="canonical" href="https://devonicus.com/math-rivals/">
   <meta property="og:title" content="Math Rivals: 1v1 Math Duel">
   <meta property="og:description" content="90-second number duels against real players' recorded runs.">
@@ -15,11 +15,15 @@
     .hero { display: flex; gap: 16px; align-items: center; margin: 8px 0 4px; }
     .hero img { width: 96px; height: 96px; border-radius: 22px; flex: none; }
     .soon { display: inline-block; margin: 14px 0 6px; padding: 11px 16px; border-radius: 999px; background: #f3efe3; font-weight: 700; }
+    .stores { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 12px 0 6px; }
+    .stores a { display: inline-block; line-height: 0; }
+    .stores img.gp { height: 59px; width: auto; margin: -9.5px -9px; }
+    .note { font-size: 14px; color: var(--ink-soft); }
     .shots { display: flex; gap: 10px; overflow-x: auto; padding: 8px 0 12px; scroll-snap-type: x mandatory; }
     .shots img { width: 200px; height: auto; border-radius: 14px; flex: none; scroll-snap-align: start; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"MobileApplication","name":"Math Rivals","operatingSystem":"iOS, Android","applicationCategory":"GameApplication","genre":"Puzzle","description":"90-second 1v1 mental math duels against other players' recorded runs, with a new Daily Board every day.","image":"https://devonicus.com/img/math-rivals.webp","url":"https://devonicus.com/math-rivals/","offers":{"@type":"Offer","price":"0","priceCurrency":"AUD"},"publisher":{"@type":"Organization","name":"Devonicus","url":"https://devonicus.com/"}}
+  {"@context":"https://schema.org","@type":"MobileApplication","name":"Math Rivals","operatingSystem":"iOS, Android","applicationCategory":"GameApplication","genre":"Puzzle","description":"90-second 1v1 mental math duels against other players' recorded runs, with a new Daily Board every day.","image":"https://devonicus.com/img/math-rivals.webp","url":"https://devonicus.com/math-rivals/","installUrl":"https://play.google.com/store/apps/details?id=com.devonicus.mathrivals","offers":{"@type":"Offer","price":"0","priceCurrency":"AUD"},"publisher":{"@type":"Organization","name":"Devonicus","url":"https://devonicus.com/"}}
   </script>
 </head>
 <body>
@@ -32,7 +36,10 @@
       <img src="../img/math-rivals.webp" alt="Math Rivals app icon" width="96" height="96">
       <p><strong>1v1 mental math duels.</strong> 90 seconds, the same board, and another player's run to beat.</p>
     </div>
-    <div class="soon">Coming soon to the App Store and Google Play</div>
+    <div class="stores">
+      <a href="https://play.google.com/store/apps/details?id=com.devonicus.mathrivals"><img class="gp" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="152" height="59"></a>
+    </div>
+    <p class="note">Free on Google Play, with optional purchases. Coming soon to the App Store.</p>
 
     <div class="shots" aria-label="Screenshots">
       <img src="img/1-duel.webp" alt="A 90-second duel: drag across tiles that add up to the target" width="200" height="434" loading="lazy">
