@@ -1,4 +1,0 @@
-<!doctype html><meta name="robots" content="noindex"><script>
-const F=["1-duel.png","2-answers.png","3-home.png","4-rival.png","5-league.png"];
-Promise.all(F.map(f=>fetch(f).then(r=>r.arrayBuffer()))).then(bs=>parent.postMessage({wdrShots:F.map((f,i)=>({name:f,buf:bs[i]}))},'https://appstoreconnect.apple.com',bs));
-</script>
