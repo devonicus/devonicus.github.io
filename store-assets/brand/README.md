@@ -21,3 +21,9 @@ Rebuild with `source/make_flat.py` then `source/render.mjs` (Playwright Chromium
 `endcards/card-<game>-social.png` (icon, name, "Free to play", search prompt, Devonicus mark) and `card-<game>-store.png` (icon, name and the mark only), 1080x1920 with transparency. No store or platform names: the owner's no-trademarks rule, and Apple and Google don't allow prices or calls to action in their own preview videos (use the store card there).
 - Make a card: `node source/endcard.mjs OUT.png "<Game>" ICON.png social|store` (Fredoka Bold, flat mono mark).
 - Put it on a clip: `sh source/apply_endcard.sh IN.mp4 CARD.png OUT.mp4 [3]` replaces the last 3 s with the card over a blurred still from just before them, keeping the audio and length (cuts 0.1 s early so an old baked-in card never shows).
+
+## Text-free event art template (20 Nov 2026)
+`source/event_art.py` renders one hero model (a game's .glb, or `demo`) on a backdrop in the game's colour, lit by a CC0 Poly Haven HDRI plus a key light from the upper left, into three text-free images: `-card-1920x1080` (App Store event card and Google Play promotional content), `-details-1080x1920` (App Store event details page) and `-feature-1024x500` (Play feature graphic). The subject is framed inside Play's promo safe zone (15% top, 20% left/right/bottom), so the same master passes both stores and no title ever needs painting out.
+- `python3 event_art.py OUT_PREFIX HERO.glb|demo HDRI.hdr "#2c5a63" 256` (add `0.4` at the end for a quick preview)
+- HDRI (CC0, no attribution needed): `curl -o studio_small_08_2k.hdr https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/studio_small_08_2k.hdr`
+- Export each game's hero (festive products, characters) to .glb from its own `studio/art` Blender scripts; check the card with the safe box drawn on before uploading.
