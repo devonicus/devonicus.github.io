@@ -16,3 +16,8 @@ Source: `source/mark.py` (Blender Cycles scene: `python3 mark.py OUT.png SIZE SA
 - `favicon.svg`, `favicon.ico` (16/32/48), `favicon-16/32/48/180/192/512.png`
 - `youtube-watermark-mono-150.png`: the one-colour watermark
 Rebuild with `source/make_flat.py` then `source/render.mjs` (Playwright Chromium).
+
+## Clip end cards (20 Nov 2026)
+`endcards/card-<game>-social.png` (icon, name, "Free to play", search prompt, Devonicus mark) and `card-<game>-store.png` (icon, name and the mark only), 1080x1920 with transparency. No store or platform names: the owner's no-trademarks rule, and Apple and Google don't allow prices or calls to action in their own preview videos (use the store card there).
+- Make a card: `node source/endcard.mjs OUT.png "<Game>" ICON.png social|store` (Fredoka Bold, flat mono mark).
+- Put it on a clip: `sh source/apply_endcard.sh IN.mp4 CARD.png OUT.mp4 [3]` replaces the last 3 s with the card over a blurred still from just before them, keeping the audio and length (cuts 0.1 s early so an old baked-in card never shows).
