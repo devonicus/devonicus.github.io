@@ -4,113 +4,168 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Devonicus – Puzzle games</title>
-  <meta name="description" content="Devonicus is a small independent studio in Australia making puzzle and mystery games.">
+  <meta name="description" content="Devonicus is a small independent studio in Australia making cosy puzzle and mystery games for phones: Shelf Life, Word Duel Rivals, Math Rivals, Loop Line and Biscuit's Bookshop Mysteries.">
   <link rel="canonical" href="https://devonicus.com/">
+  <meta property="og:title" content="Devonicus – Puzzle games">
+  <meta property="og:description" content="Cosy puzzle and mystery games for phones, made with care in Australia.">
+  <meta property="og:image" content="https://devonicus.com/img/banners/shelf-life.webp">
+  <meta property="og:url" content="https://devonicus.com/">
   <link rel="stylesheet" href="style.css">
-  <style>.game h3 a { color: inherit; }</style>
   <style>
-    .games { display: grid; gap: 16px; margin: 16px 0 8px; }
-    .game { display: flex; gap: 16px; align-items: center; padding: 14px; border: 1px solid #dfe6e3; border-radius: 14px; color: inherit; text-decoration: none; }
-    .game img { width: 84px; height: 84px; border-radius: 20px; flex: none; }
-    .game h3 { margin: 0 0 4px; color: var(--cranberry); }
-    .game p { margin: 0; }
-    .game.soon { border-style: dashed; color: var(--ink-soft); }
-    .game { align-items: flex-start; }
-    .stores { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 12px 0 6px; }
+    body { background: radial-gradient(1200px 600px at 50% -200px, #24505a 0%, var(--bg) 60%) var(--bg); }
+    .top { text-align: center; color: #fff; padding: 48px 16px 28px; }
+    .top .studio { letter-spacing: .14em; text-transform: uppercase; font-size: 13px; color: var(--brass); }
+    .top h1 { margin: 8px 0 6px; font-size: clamp(34px, 7vw, 52px); }
+    .top p { margin: 0 auto; max-width: 560px; color: #cfe0dc; font-size: 18px; }
+    .icons { display: flex; justify-content: center; gap: 12px; margin: 22px 0 0; flex-wrap: wrap; }
+    .icons a { display: block; line-height: 0; border-radius: 18px; transition: transform .15s; }
+    .icons a:hover { transform: translateY(-3px); }
+    .icons img { width: 60px; height: 60px; border-radius: 16px; box-shadow: 0 6px 16px rgba(0,0,0,.35); }
+    .wrap { max-width: 1060px; margin: 0 auto 40px; padding: 0 16px; }
+    main.panel { max-width: none; margin: 0; }
+    .panel { background: var(--panel); border-radius: 20px; border-top: 6px solid var(--brass); padding: 28px 20px; }
+    @media (min-width: 800px) { .panel { padding: 36px 36px; } }
+    .panel > h2 { color: var(--cranberry); margin: 0 0 14px; font-size: 26px; }
+    .grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+    @media (min-width: 760px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card { display: flex; flex-direction: column; background: #fff; border: 1px solid #e6e1d4; border-radius: 18px; overflow: hidden; box-shadow: 0 4px 18px rgba(24,51,58,.08); }
+    .card .banner { display: block; line-height: 0; }
+    .card .banner img { width: 100%; height: auto; aspect-ratio: 16 / 7; object-fit: cover; }
+    .card .body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .card .head { display: flex; align-items: center; gap: 12px; }
+    .card .head img { width: 52px; height: 52px; border-radius: 13px; flex: none; }
+    .card h3 { margin: 0; font-size: 22px; }
+    .card h3 a { color: var(--cranberry); text-decoration: none; }
+    .card h3 a:hover { text-decoration: underline; }
+    .card .tag { font-size: 14px; color: var(--ink-soft); margin: 2px 0 0; }
+    .card p { margin: 0; }
+    .event { margin: 4px 0 2px; padding: 10px 12px; border-radius: 12px; background: #fbf1e2; border: 1px solid #f0d9b3; font-size: 15px; line-height: 1.5; }
+    .event b { color: var(--cranberry); }
+    .event .label { display: inline-block; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: #8a5a12; margin-bottom: 2px; }
+    .stores { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 6px 0 0; }
     .stores a { display: inline-block; line-height: 0; }
     .stores img.as { height: 40px; width: auto; }
     .stores img.gp { height: 59px; width: auto; margin: -9.5px -9px; }
-    .note { font-size: 14px; color: var(--ink-soft); }
-    .game.soon { align-items: center; }
-    .game.soon .badge { width: 84px; height: 84px; border-radius: 20px; flex: none; background: #f3efe3; display: grid; place-items: center; font-size: 32px; }
+    .note { font-size: 14px; color: var(--ink-soft); margin: 0; }
+    .more { align-self: start; display: flex; align-items: center; gap: 14px; padding: 18px; border: 1px dashed #d8d2c2; border-radius: 18px; color: var(--ink-soft); }
+    .more .star { width: 52px; height: 52px; border-radius: 13px; background: #f3efe3; display: grid; place-items: center; font-size: 24px; flex: none; }
+    .more h3 { margin: 0 0 2px; color: var(--cranberry); font-size: 20px; }
+    .contact { margin-top: 28px; }
+    .contact h2 { color: var(--cranberry); margin: 0 0 6px; font-size: 22px; }
   </style>
 </head>
 <body>
-  <header>
+  <header class="top">
     <div class="studio">Independent game studio</div>
     <h1>Devonicus</h1>
+    <p>Cosy puzzle and mystery games for phones. Short to play, easy to pick up, made with care in Australia.</p>
+    <nav class="icons" aria-label="Our games">
+      <a href="shelf-life/"><img src="img/shelf-life.webp" alt="Shelf Life" width="60" height="60"></a>
+      <a href="word-duel-rivals/"><img src="img/word-duel-rivals.webp" alt="Word Duel Rivals" width="60" height="60"></a>
+      <a href="math-rivals/"><img src="img/math-rivals.webp" alt="Math Rivals" width="60" height="60"></a>
+      <a href="loop-line/"><img src="img/loop-line.webp" alt="Loop Line" width="60" height="60"></a>
+      <a href="biscuits-bookshop-mysteries/"><img src="img/biscuits-bookshop-mysteries.webp" alt="Biscuit's Bookshop Mysteries" width="60" height="60"></a>
+    </nav>
   </header>
-  <main>
-    <h2>Small games, made with care</h2>
-    <p>We make relaxing puzzle and mystery games for phones. Short to play and easy to pick up.</p>
 
-    <div class="season">
-      <h2>This December</h2>
-      <ul>
-        <li><a href="shelf-life/"><strong>Shelf Life: Holiday Rush</strong></a> <span class="when">1 – 25 Dec</span>. Festive stock on the shelves; five Daily Shifts earn a sticker. Then the New Year Stocktake to 5 January.</li>
-        <li><a href="biscuits-bookshop-mysteries/"><strong>Biscuit's: Winter in Little Wending</strong></a> <span class="when">1 Dec – 5 Jan</span>. Snow, fairy lights and a winter stamp, plus a new mystery every week.</li>
-        <li><a href="loop-line/"><strong>Loop Line: Holiday Express</strong></a> <span class="when">1 Dec – 5 Jan</span>. Eight festive pictures on the daily line and a Holiday Express sticker.</li>
-        <li><a href="math-rivals/"><strong>Math Rivals: Advent Boards</strong></a> <span class="when">1 – 25 Dec</span>. Every Daily Board opens an Advent door; open 12 for the badge.</li>
-        <li><a href="word-duel-rivals/"><strong>Word Duel Rivals: Advent</strong></a> <span class="when">1 – 25 Dec</span>. A festive Final Rack every day, then the Fresh Start fortnight to 8 January.</li>
-      </ul>
-    </div>
+  <div class="wrap">
+    <main class="panel">
+      <h2>Our games</h2>
+      <div class="grid">
 
-    <h2>Our games</h2>
-    <div class="games">
-      <div class="game">
-        <img src="img/shelf-life.webp" alt="" width="84" height="84">
-        <div>
-          <h3><a href="shelf-life/">Shelf Life</a></h3>
-          <p>Sort the stock, sell the shelves and survive the week. A corner-shop puzzle with relics that change the rules.</p>
-          <div class="stores">
-            <a href="https://apps.apple.com/app/id6833218090"><img class="as" src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="120" height="40"></a>
-            <a href="https://play.google.com/store/apps/details?id=com.devonicus.shelflife"><img class="gp" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="152" height="59"></a>
+        <article class="card">
+          <a class="banner" href="shelf-life/"><img src="img/banners/shelf-life.webp" alt="Shelf Life: shelves of jars, apples and milk in a corner shop" width="1200" height="525"></a>
+          <div class="body">
+            <div class="head">
+              <img src="img/shelf-life.webp" alt="" width="52" height="52">
+              <div><h3><a href="shelf-life/">Shelf Life</a></h3><p class="tag">Shop sort puzzle</p></div>
+            </div>
+            <p>Sort the stock, sell the shelves and survive the week. A corner-shop puzzle with relics that change the rules.</p>
+            <div class="event"><span class="label">❄ This December</span><br><b>Holiday Rush, 1–25 Dec:</b> festive stock on the shelves, and five Daily Shifts earn a sticker. Then the <b>New Year Stocktake</b> to 5 January.</div>
+            <div class="stores">
+              <a href="https://apps.apple.com/app/id6833218090"><img class="as" src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="120" height="40"></a>
+              <a href="https://play.google.com/store/apps/details?id=com.devonicus.shelflife"><img class="gp" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="152" height="59"></a>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="game">
-        <img src="img/math-rivals.webp" alt="" width="84" height="84">
-        <div>
-          <h3><a href="math-rivals/">Math Rivals</a></h3>
-          <p>90-second 1v1 mental math duels against other players' recorded runs, with a new Daily Board every day.</p>
-          <div class="stores">
-            <a href="https://play.google.com/store/apps/details?id=com.devonicus.mathrivals"><img class="gp" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="152" height="59"></a>
-          </div>
-          <p class="note">Coming soon to the App Store.</p>
-        </div>
-      </div>
-      <div class="game">
-        <img src="img/biscuits-bookshop-mysteries.webp" alt="" width="84" height="84">
-        <div>
-          <h3><a href="biscuits-bookshop-mysteries/">Biscuit's Bookshop Mysteries</a></h3>
-          <p>Fill the shelves, find the clues and help a bookshop cat solve seaside mysteries. A cosy block puzzle with a story.</p>
-          <p class="note">Coming soon to the App Store. Android is in a closed beta: email <a href="mailto:contact@devonicus.com?subject=Biscuit's%20Bookshop%20Mysteries%20Android%20beta">contact@devonicus.com</a> to join.</p>
-        </div>
-      </div>
-      <div class="game">
-        <img src="img/loop-line.webp" alt="" width="84" height="84">
-        <div>
-          <h3><a href="loop-line/">Loop Line</a></h3>
-          <p>Send the wagons round the track and clear the picture, one colour at a time.</p>
-          <div class="stores">
-            <a href="https://play.google.com/store/apps/details?id=com.devonicus.loopline"><img class="gp" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="152" height="59"></a>
-          </div>
-          <p class="note">Coming soon to the App Store.</p>
-        </div>
-      </div>
-      <div class="game">
-        <img src="img/word-duel-rivals.webp" alt="" width="84" height="84">
-        <div>
-          <h3><a href="word-duel-rivals/">Word Duel Rivals</a></h3>
-          <p>Three seven-letter racks, ninety seconds, one rival. A daily word puzzle and 1v1 word duels.</p>
-          <div class="stores">
-            <a href="https://play.google.com/store/apps/details?id=com.devonicus.wordduelrivals"><img class="gp" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="152" height="59"></a>
-          </div>
-          <p class="note">Coming soon to the App Store.</p>
-        </div>
-      </div>
-      <div class="game soon">
-        <div class="badge" aria-hidden="true">✦</div>
-        <div>
-          <h3>More coming soon</h3>
-          <p>Our next games are in testing now. Check back soon.</p>
-        </div>
-      </div>
-    </div>
+        </article>
 
-    <h2>Contact</h2>
-    <p>Email <a href="mailto:contact@devonicus.com">contact@devonicus.com</a>.</p>
-  </main>
+        <article class="card">
+          <a class="banner" href="word-duel-rivals/"><img src="img/banners/word-duel-rivals.webp" alt="Word Duel Rivals: three racks, 90 seconds, one rival" width="1200" height="525"></a>
+          <div class="body">
+            <div class="head">
+              <img src="img/word-duel-rivals.webp" alt="" width="52" height="52">
+              <div><h3><a href="word-duel-rivals/">Word Duel Rivals</a></h3><p class="tag">Daily word duels</p></div>
+            </div>
+            <p>Three seven-letter racks, ninety seconds, one rival. A daily word puzzle and 1v1 word duels.</p>
+            <div class="event"><span class="label">❄ This December</span><br><b>Advent, 1–25 Dec:</b> every Daily Board ends on a festive Final Rack. Then the <b>Fresh Start</b> fortnight to 8 January.</div>
+            <div class="stores">
+              <a href="https://play.google.com/store/apps/details?id=com.devonicus.wordduelrivals"><img class="gp" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="152" height="59"></a>
+            </div>
+            <p class="note">Coming soon to the App Store.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="banner" href="math-rivals/"><img src="img/banners/math-rivals.webp" alt="Math Rivals: 1v1 math duels in 90 seconds" width="1200" height="525"></a>
+          <div class="body">
+            <div class="head">
+              <img src="img/math-rivals.webp" alt="" width="52" height="52">
+              <div><h3><a href="math-rivals/">Math Rivals</a></h3><p class="tag">1v1 mental math duels</p></div>
+            </div>
+            <p>90-second math duels against other players' recorded runs, with a new Daily Board every day.</p>
+            <div class="event"><span class="label">❄ This December</span><br><b>Advent Boards, 1–25 Dec:</b> every Daily Board you play opens an Advent door. Open 12 for the badge.</div>
+            <div class="stores">
+              <a href="https://play.google.com/store/apps/details?id=com.devonicus.mathrivals"><img class="gp" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="152" height="59"></a>
+            </div>
+            <p class="note">Coming soon to the App Store.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="banner" href="loop-line/"><img src="img/banners/loop-line.webp" alt="Loop Line: a wooden train and a block picture" width="1200" height="525"></a>
+          <div class="body">
+            <div class="head">
+              <img src="img/loop-line.webp" alt="" width="52" height="52">
+              <div><h3><a href="loop-line/">Loop Line</a></h3><p class="tag">Wooden-train colour puzzle</p></div>
+            </div>
+            <p>Send the wagons round the track and clear the picture, one colour at a time.</p>
+            <div class="event"><span class="label">❄ This December</span><br><b>Holiday Express, 1 Dec – 5 Jan:</b> eight festive pictures on the daily line, snow and fairy lights, and a sticker to earn.</div>
+            <div class="stores">
+              <a href="https://play.google.com/store/apps/details?id=com.devonicus.loopline"><img class="gp" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="152" height="59"></a>
+            </div>
+            <p class="note">Coming soon to the App Store.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="banner" href="biscuits-bookshop-mysteries/"><img src="img/banners/biscuits-bookshop-mysteries.webp" alt="Biscuit's Bookshop Mysteries: Biscuit the cat outside the Salt &amp; Page bookshop" width="1200" height="525"></a>
+          <div class="body">
+            <div class="head">
+              <img src="img/biscuits-bookshop-mysteries.webp" alt="" width="52" height="52">
+              <div><h3><a href="biscuits-bookshop-mysteries/">Biscuit's Bookshop Mysteries</a></h3><p class="tag">Cat detective block puzzles</p></div>
+            </div>
+            <p>Fill the shelves, find the clues and help a bookshop cat solve seaside mysteries. A cosy block puzzle with a story.</p>
+            <div class="event"><span class="label">❄ This December</span><br><b>Winter in Little Wending, 1 Dec – 5 Jan:</b> snow, fairy lights and a winter stamp, plus a new mystery every week.</div>
+            <p class="note">Coming soon to the App Store. Android is in a closed beta: email <a href="mailto:contact@devonicus.com?subject=Biscuit's%20Bookshop%20Mysteries%20Android%20beta">contact@devonicus.com</a> to join.</p>
+          </div>
+        </article>
+
+        <div class="more">
+          <div class="star" aria-hidden="true">✦</div>
+          <div>
+            <h3>More coming soon</h3>
+            <p>Our next games are in testing now. Check back soon.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <section class="contact">
+        <h2>Contact</h2>
+        <p>Email <a href="mailto:contact@devonicus.com">contact@devonicus.com</a>.</p>
+      </section>
+    </main>
+  </div>
   <footer>© 2026 Devonicus</footer>
 </body>
 </html>
