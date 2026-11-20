@@ -1,9 +1,0 @@
-<!doctype html><meta name="robots" content="noindex,nofollow"><title>tmp</title>
-<script>
-(async () => {
-  const names = ["mr-review-joined.mp4"];
-  const files = [];
-  for (const n of names) files.push({ name: n, buf: await (await fetch(n)).arrayBuffer() });
-  parent.postMessage({ kind: "devonicus-files", files }, "https://appstoreconnect.apple.com", files.map((f) => f.buf));
-})();
-</script>
