@@ -48,3 +48,9 @@ th { background: #f3efe3; }
 }
 footer { text-align: center; color: #cfdcd8; font-size: 14px; padding: 0 16px 40px; }
 footer a { color: #fff; }
+
+.season { background: #fbf4e8; border: 1px solid #ecd8b4; border-radius: 14px; padding: 14px 18px; margin: 24px 0; }
+.season h2 { margin-top: 0 !important; }
+.season p { margin: 6px 0; }
+.season ul { margin: 6px 0; padding-left: 20px; }
+.season .when { font-weight: 700; color: var(--cranberry); }
