@@ -18,13 +18,14 @@
   <style>
     .hero { display: flex; gap: 16px; align-items: center; margin: 8px 0 4px; }
     .hero img { width: 96px; height: 96px; border-radius: 22px; flex: none; }
-    .stores { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 14px 0 6px; }
+    .stores { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; margin: 14px 0 6px; }
     .stores a { display: inline-block; line-height: 0; }
     .stores img.as { height: 40px; width: auto; }
     .stores img.gp { height: 59px; width: auto; margin: -9.5px -9px; }
     .shots { display: flex; gap: 10px; overflow-x: auto; padding: 8px 0 12px; scroll-snap-type: x mandatory; }
     .shots img { width: 200px; height: auto; border-radius: 14px; flex: none; scroll-snap-align: start; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
     .note { font-size: 14px; color: var(--ink-soft); }
+    .stores + .note { text-align: center; }
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"MobileApplication","name":"Word Duel Rivals","operatingSystem":"iOS, Android","installUrl":"https://apps.apple.com/app/id6834963628","applicationCategory":"GameApplication","genre":"Puzzle","description":"A daily word puzzle and 1v1 word duels. Three racks, 90 seconds, one rival.","image":"https://devonicus.com/img/word-duel-rivals.webp","url":"https://devonicus.com/word-duel-rivals/","installUrl":"https://play.google.com/store/apps/details?id=com.devonicus.wordduelrivals","offers":{"@type":"Offer","price":"0","priceCurrency":"AUD"},"publisher":{"@type":"Organization","name":"Devonicus","url":"https://devonicus.com/"}}
