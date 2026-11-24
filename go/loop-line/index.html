@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Store links only: this page sends phones to the right app store. No game build here (see READ-FIRST.md). -->
+  <meta name="robots" content="noindex">
+  <title>Get Loop Line</title>
+  <meta property="og:title" content="Loop Line: Toy Train Puzzle">
+  <meta property="og:description" content="Send the toy wagons round the line and clear the picture, one colour at a time.">
+  <meta property="og:image" content="https://devonicus.com/img/loop-line.webp">
+  <link rel="icon" href="/img/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/img/brand/icon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/img/brand/apple-touch-icon.png">
+  <meta name="theme-color" content="#23262B">
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    .get { text-align: center; padding: 24px 0; }
+    .get img { width: 112px; height: 112px; border-radius: 26px; }
+    .get .links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 16px; }
+    .get .links a { padding: 12px 18px; border-radius: 999px; background: var(--brass); color: var(--ink); font-weight: 700; text-decoration: none; }
+  </style>
+  <script>
+    // Straight to the store on a phone; desktops see the buttons. Loop Line is live on both stores.
+    // ?src=tiktok (or instagram, youtube, facebook, reddit...) is passed on so each platform's installs can be counted:
+    // Google Play as a UTM referrer (Play Console > Acquisition > Tracked channels), the App Store as a campaign
+    // token once APPLE_PT (the provider token from App Store Connect > Analytics > Campaigns) is filled in.
+    var APPLE_PT = "";
+    var src = (new URLSearchParams(location.search).get("src") || "").replace(/[^a-z0-9_-]/gi, "").slice(0, 40);
+    var APPLE = "https://apps.apple.com/app/id6833218599" + (src && APPLE_PT ? "?pt=" + APPLE_PT + "&ct=" + src + "&mt=8" : "");
+    var PLAY = "https://play.google.com/store/apps/details?id=com.devonicus.loopline" +
+      (src ? "&referrer=" + encodeURIComponent("utm_source=" + src + "&utm_medium=social&utm_campaign=loop-line-clips") : "");
+    (function () {
+      var ua = navigator.userAgent || "";
+      var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+      if (ios) location.replace(APPLE);
+      else if (/Android/.test(ua)) location.replace(PLAY);
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <div class="studio">Independent game studio</div>
+    <h1>Devonicus</h1>
+  </header>
+  <main class="get">
+    <img src="../../img/loop-line.webp" alt="" width="112" height="112">
+    <h2>Loop Line</h2>
+    <p>Send the toy wagons round the line and clear the picture.</p>
+    <div class="links">
+      <a id="apple" href="https://apps.apple.com/app/id6833218599">App Store</a>
+      <a id="play" href="https://play.google.com/store/apps/details?id=com.devonicus.loopline">Google Play</a>
+    </div>
+    <script>
+      document.getElementById("apple").href = APPLE;
+      document.getElementById("play").href = PLAY;
+    </script>
+  </main>
+  <footer>© 2026 Devonicus</footer>
+</body>
+</html>
