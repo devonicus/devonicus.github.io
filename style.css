@@ -1,11 +1,19 @@
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/fonts/bricolage-grotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-stretch: 75% 100%;
+  font-display: swap;
+}
 :root {
-  --bg: #18333a;
-  --panel: #fffdf6;
-  --ink: #1d2a2e;
-  --ink-soft: #4a5b5f;
-  --brass: #f2b33d;
-  --cranberry: #a8324a;
-  --link: #1f6f86;
+  --bg: #23262B;
+  --panel: #F7F3EB;
+  --ink: #23262B;
+  --ink-soft: #5A5E66;
+  --brass: #E3A33B;
+  --cranberry: #9A6416;
+  --link: #8A5A12;
+  --paper: #F3EEE4;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -22,7 +30,7 @@ header {
 }
 header a { color: #fff; text-decoration: none; }
 header .studio { letter-spacing: .12em; text-transform: uppercase; font-size: 13px; color: var(--brass); }
-h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; line-height: 1.2; }
+h1, h2, h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 700; font-stretch: 88%; line-height: 1.15; letter-spacing: -.01em; }
 header h1 { margin: 8px 0 0; font-size: clamp(28px, 6vw, 40px); }
 main {
   max-width: 760px;
@@ -54,3 +62,7 @@ footer a { color: #fff; }
 .season p { margin: 6px 0; }
 .season ul { margin: 6px 0; padding-left: 20px; }
 .season .when { font-weight: 700; color: var(--cranberry); }
+
+.brand { display: inline-block; line-height: 0; }
+.brand img { height: 30px; width: auto; }
+header .brand + h1 { margin-top: 14px; }
