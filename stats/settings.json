@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "updated": "2026-11-25",
+  "level": "detailed",
+  "share": 1.0,
+  "maxPerDay": 40,
+  "games": {
+    "plush-pirates": { "level": "off" }
+  }
+}

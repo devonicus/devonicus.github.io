@@ -30,3 +30,11 @@ devonicus.com is public. Since 8 November 2026 these rules apply:
 
 If a game's submission pack or a skill says to host a build on devonicus.com, follow these rules
 instead: host only an encrypted test build.
+
+## stats/settings.json (statistics detail switch)
+The phone games read this at start-up to decide how much to send to TelemetryDeck.
+`level`: `off`, `basic` (spec v2: 3-5 signals per player a day) or `detailed`
+(per-level and per-ad signals); `share`: fraction of players who send (0-1);
+`maxPerDay`: cap per player; `games.<slug>` overrides any of these. Games keep the
+last value they read and use `basic` if they never could. Plush Pirates is always off.
+Turn it down here if monthly signals near the plan limit; no app update needed.
