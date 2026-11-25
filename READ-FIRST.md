@@ -32,9 +32,18 @@ If a game's submission pack or a skill says to host a build on devonicus.com, fo
 instead: host only an encrypted test build.
 
 ## stats/settings.json (statistics detail switch)
-The phone games read this at start-up to decide how much to send to TelemetryDeck.
-`level`: `off`, `basic` (spec v2: 3-5 signals per player a day) or `detailed`
-(per-level and per-ad signals); `share`: fraction of players who send (0-1);
-`maxPerDay`: cap per player; `games.<slug>` overrides any of these. Games keep the
-last value they read and use `basic` if they never could. Plush Pirates is always off.
-Turn it down here if monthly signals near the plan limit; no app update needed.
+The phone games read this to decide how much to send to TelemetryDeck: at start-up and each time the app
+comes back to the front, so a change takes effect within the same session (GitHub Pages may cache it ~10 min).
+- `level`: `off`, `basic` (spec v2: 3-5 signals per player a day) or `detailed` (also per-board / per-level and
+  per-ad signals); `share`: fraction of players who send (0-1, the same players every day); `maxPerDay`: cap
+  per player per day.
+- **Overrides, most specific wins:** `games.<slug>.platforms.<ios|android>` > `games.<slug>` >
+  `platforms.<ios|android>` > the top-level values. Any field left out falls through to the next level.
+  Examples: everything on iOS to basic: `"platforms": {"ios": {"level": "basic"}}`. Shelf Life on Android off:
+  `"games": {"shelf-life": {"platforms": {"android": {"level": "off"}}}}`.
+- Slugs: `shelf-life`, `math-rivals`, `word-duel-rivals`, `biscuits`, `loop-line`, `nap-spots`, `harbour-knots`,
+  `round-the-houses`, `topsy-toybox`, `plush-pirates` (always off: children's app).
+- **Fallback:** if this file can't be reached, a game keeps the last value it read; if it never read one, it uses
+  its own `telemetryDefault` in `src/platform/app-config.ts` (basic, share 1, 40 a day unless set otherwise).
+- Keep it valid JSON (check before pushing). Turn it down here if monthly events near the plan limit (Indie
+  plan: 750K a month); no app update needed. Games that read it so far: Shelf Life from 0.3.1.
