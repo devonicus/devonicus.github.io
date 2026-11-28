@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /stats/
+Disallow: /r/
 
 Sitemap: https://devonicus.com/sitemap.xml

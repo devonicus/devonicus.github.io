@@ -32,6 +32,8 @@ If a game's submission pack or a skill says to host a build on devonicus.com, fo
 instead: host only an encrypted test build.
 
 ## stats/settings.json (statistics detail switch)
+
+**Moving (28 Nov 2026):** this switch moves into the encrypted, signed `r/config.bin` (project doc "Bonus links - spec"). Keep this file only while store builds still read it; change both together until then, then remove it with the owner's yes. Never commit the plain `config.json` or any key.
 The phone games read this to decide how much to send to TelemetryDeck: at start-up and each time the app
 comes back to the front, so a change takes effect within the same session (GitHub Pages may cache it ~10 min).
 - `level`: `off`, `basic` (spec v2: 3-5 signals per player a day) or `detailed` (also per-board / per-level and
